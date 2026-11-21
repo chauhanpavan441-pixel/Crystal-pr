@@ -52,15 +52,19 @@ fun AboutScreen(label: String, version: String, onClose: () -> Unit, busy: Boole
         ConstrainedPage(Modifier.padding(padding), maxWidth = 720.dp) {
             Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()),
                 verticalArrangement = Arrangement.spacedBy(SettingsTokens.GroupGap)) {
+                
+                // ========================================================
+                // यहाँ हमने पुराने ic_launcher_monochrome की जगह हमारी नई लोगो लगाई है
+                // ========================================================
                 Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 20.dp), verticalAlignment = Alignment.CenterVertically) {
-                    Image(painterResource(R.drawable.ic_launcher_monochrome), label, Modifier.size(40.dp), contentScale = ContentScale.Fit,
-                        colorFilter = ColorFilter.tint(MaterialTheme.colorScheme.onSurface))
+                    Image(painterResource(R.drawable.ic_launcher_foreground), label, Modifier.size(48.dp), contentScale = ContentScale.Fit)
                     Spacer(Modifier.width(16.dp))
                     Column {
                         Text(label, fontSize = 18.sp, lineHeight = 24.sp, fontWeight = FontWeight.Medium)
                         Text(version, fontSize = 12.sp, lineHeight = 18.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
                     }
                 }
+                
                 AboutRow(stringResource(R.string.about_source), onClick = onSource)
                 AboutRow(stringResource(R.string.about_check_update), !busy, onUpdate)
                 AboutRow(stringResource(R.string.about_releases), onClick = onRelease)

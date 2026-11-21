@@ -329,7 +329,7 @@ private fun SearchNavigationBar(signedIn: Boolean, onAction: (SearchAction) -> U
                     .testTag("search-nav-${destination.name}"),
                     horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
                     if (signedIn && destination == SearchDestination.You) {
-                        Image(painterResource(R.drawable.sample_bunny), contentDescription = null,
+                        Image(painterResource(R.drawable.ic_litube_mark), contentDescription = null,
                             modifier = Modifier.size(24.dp).clip(CircleShape), contentScale = ContentScale.Crop)
                     } else AppIcon(when (destination) {
                         SearchDestination.Home -> AppIcon.HomeOutline

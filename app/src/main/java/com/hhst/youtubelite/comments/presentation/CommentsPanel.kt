@@ -971,7 +971,7 @@ private fun Divider() {
 
 @Composable
 private fun DefaultAvatar(size: Dp) {
-    Image(painterResource(R.drawable.comment_avatar), contentDescription = null,
+    Image(painterResource(R.drawable.ic_litube_mark), contentDescription = null,
         modifier = Modifier.size(size).clip(CircleShape), contentScale = ContentScale.Crop)
 }
 

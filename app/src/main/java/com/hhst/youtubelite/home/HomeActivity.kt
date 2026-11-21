@@ -267,19 +267,3 @@ class HomeActivity : com.hhst.youtubelite.ui.ContentActivity() {
         const val EXTRA_DEFER_HOME = "defer_home_until_visible"
     }
 }
-tra(EXTRA_SIGNED_IN)) homeViewModel.setSignedInPreview(intent.getBooleanExtra(EXTRA_SIGNED_IN, false))
-        receiveLink(intent)
-    }
-
-    private fun receiveLink(intent: Intent) {
-        if (intent.action != Intent.ACTION_VIEW && intent.action != Intent.ACTION_SEND) return
-        val link = DownloadShareParser.extractUrl(intent.dataString ?: intent.getStringExtra(Intent.EXTRA_TEXT)) ?: return
-        homeViewModel.onAction(HomeAction.Navigate(HomeNavigationRequest.OpenLink(link)))
-    }
-
-    companion object {
-        const val EXTRA_SCENARIO = "home_scenario"
-        const val EXTRA_SIGNED_IN = "signed_in_preview"
-        const val EXTRA_DEFER_HOME = "defer_home_until_visible"
-    }
-}

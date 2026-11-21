@@ -114,3 +114,15 @@ fun AppTheme(
         content = content,
     ) }
 }
+
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableFloatStateOf
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
+
+object GlassConfig {
+    var opacity by mutableFloatStateOf(0.15f)
+    var blurRadius by mutableFloatStateOf(16f)
+    var isSnowEnabled by mutableStateOf(false)
+    var snowSize by mutableFloatStateOf(1.0f)
+}

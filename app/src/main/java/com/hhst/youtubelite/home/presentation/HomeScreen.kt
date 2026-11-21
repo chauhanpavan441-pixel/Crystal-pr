@@ -315,7 +315,7 @@ private fun HomeBottomBar(signedIn: Boolean, onAction: (HomeAction) -> Unit, ava
                     if (signedIn && destination == HomeDestination.You) {
                         if (avatar.isNullOrBlank()) {
                             Image(
-                                painterResource(R.drawable.sample_bunny),
+                                painterResource(R.drawable.ic_litube_mark),
                                 contentDescription = null, modifier = Modifier.size(24.dp).clip(CircleShape),
                                 contentScale = ContentScale.Crop,
                             )

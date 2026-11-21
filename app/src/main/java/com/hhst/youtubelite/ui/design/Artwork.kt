@@ -23,9 +23,9 @@ fun Artwork(asset: String, modifier: Modifier = Modifier, contentScale: ContentS
     }
     Image(
         painterResource(when (asset) {
-            "dream" -> R.drawable.sample_dream
-            "sintel" -> R.drawable.sample_sintel
-            else -> R.drawable.sample_bunny
+            "dream" -> R.drawable.ic_litube_mark
+            "sintel" -> R.drawable.ic_litube_mark
+            else -> R.drawable.ic_litube_mark
         }),
         contentDescription = null,
         modifier = modifier,

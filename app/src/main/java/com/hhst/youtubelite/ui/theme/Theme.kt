@@ -10,6 +10,10 @@ import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.graphics.Color
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableFloatStateOf
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 
 // Specify container roles too: Material defaults otherwise reintroduce purple
 // on dialogs, menus and selected controls in the neutral app palette.
@@ -115,10 +119,6 @@ fun AppTheme(
     ) }
 }
 
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableFloatStateOf
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.setValue
 
 object GlassConfig {
     var opacity by mutableFloatStateOf(0.15f)
